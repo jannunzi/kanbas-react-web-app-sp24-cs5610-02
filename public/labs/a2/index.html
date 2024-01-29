@@ -1,7 +1,252 @@
 <html>
-  <head></head>
+  <head>
+    <link rel="stylesheet" href="index.css" />
+    <style></style>
+  </head>
   <body>
     <a href="../../index.html"> Back to Home </a>
-    <h1>Lab 2</h1>
+    <h1>Lab 2 - Cascading Style Sheets</h1>
+    <h2>Style attribute and tag</h2>
+    <h3>Style attribute</h3>
+    <p>
+      Style attribute allows configuring look and feel right on the element.
+      Although it's very convenient it is considered bad practice and you should
+      avoid using the style attribute
+    </p>
+    <p>
+      Style attribute allows configuring look and feel right on the element.
+      Although it's very convenient it is considered bad practice and you should
+      avoid using the style attribute
+    </p>
+
+    <h2>Selectors</h2>
+    <h3>ID Selectors</h3>
+    <p id="id-selector-1">
+      Instead of changing the look and feel of all the elements of the same
+      name, e.g., P, we can refer to a specific element by its ID
+    </p>
+    <p id="id-selector-2">
+      Here's another paragraph using a different ID and a different look and
+      feel
+    </p>
+    <h3>Class selectors</h3>
+    <p class="wd-class-selector">
+      Instead of using IDs to refer to elements, you can use an element's CLASS
+      attribute
+    </p>
+    <h4 class="wd-class-selector">
+      This heading has same style as paragraph above
+    </h4>
+    <div class="wd-selector-1">
+      <h3>Document structure selectors</h3>
+      <div class="wd-selector-2">
+        Selectors can be combined to refer elements in particular places in the
+        document
+        <p class="wd-selector-3">
+          This paragraph's red background is referenced as
+          <br />.selector-2 .selector3<br />
+          meaning the descendant of some ancestor.
+          <br />
+          <span class="wd-selector-4"
+            >Whereas this span is a direct child of its parent</span
+          >
+          <br />
+          You can combine these relationships to create specific styles
+          depending on the document structure
+        </p>
+      </div>
+    </div>
+    <h2>Colors</h2>
+    <h3 class="wd-fg-color-blue">Foreground color</h3>
+    <p class="wd-fg-color-red">
+      The text in this paragraph is red but
+      <span class="wd-fg-color-green">this text is green</span>
+    </p>
+    <h3 class="wd-bg-color-blue wd-fg-color-white">Background color</h3>
+    <p class="wd-bg-color-red wd-fg-color-black">
+      This background of this paragraph is red but
+      <span class="wd-bg-color-green wd-fg-color-white">
+        the background of this text is green and the foreground white</span
+      >
+    </p>
+    <h2>Dimension</h2>
+    <div>
+      <div class="wd-dimension-portrait wd-bg-color-yellow">Portrait</div>
+      <div class="wd-dimension-landscape wd-bg-color-blue wd-fg-color-white">
+        Landscape
+      </div>
+      <div class="wd-dimension-square wd-bg-color-red">Square</div>
+    </div>
+
+    <h2>Position</h2>
+    <h3>Relative</h3>
+    <div>
+      <div class="wd-bg-color-yellow wd-dimension-portrait">
+        <div class="wd-pos-relative-nudge-down-right">Portrait</div>
+      </div>
+      <div
+        class="wd-pos-relative-nudge-up-right wd-bg-color-blue wd-fg-color-white wd-dimension-landscape"
+      >
+        Landscape
+      </div>
+      <div class="wd-bg-color-red wd-dimension-square">Square</div>
+    </div>
+
+    <h3>Absolute position</h3>
+    <div class="wd-pos-relative wd-bg-color-gray">
+      <div
+        class="wd-pos-absolute-10-10 wd-bg-color-yellow wd-dimension-portrait"
+      >
+        Portrait
+      </div>
+      <div
+        class="wd-pos-absolute-50-50 wd-bg-color-blue wd-fg-color-white wd-dimension-landscape"
+      >
+        Landscape
+      </div>
+      <div class="wd-pos-absolute-120-20 wd-bg-color-red wd-dimension-square">
+        Square
+      </div>
+    </div>
+    <br /><br /><br /><br /><br /><br /><br />
+    <h2>Z index</h2>
+    <div class="wd-pos-relative">
+      <div
+        class="wd-pos-absolute-10-10 wd-bg-color-yellow wd-dimension-portrait"
+      >
+        Portrait
+      </div>
+      <div
+        class="wd-zindex-bring-to-front wd-pos-absolute-50-50 wd-bg-color-blue wd-fg-color-white wd-dimension-landscape"
+      >
+        Landscape
+      </div>
+      <div class="wd-pos-absolute-120-20 wd-bg-color-red wd-dimension-square">
+        Square
+      </div>
+    </div>
+    <br /><br /><br /><br /><br /><br /><br />
+    <h2>Float</h2>
+    <p>
+      <img
+        height="50px"
+        src="https://picsum.photos/200/300"
+        alt="random image"
+      />
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, rerum
+      esse cum minima voluptates harum qui, nobis non omnis minus quas
+      <img
+        class="wd-float-left"
+        style="margin-right: 5px"
+        height="100px"
+        src="https://picsum.photos/200/300"
+        alt="random image"
+      />
+      <img
+        class="wd-float-left"
+        style="margin-right: 5px"
+        height="100px"
+        src="https://picsum.photos/200/300"
+        alt="random image"
+      />
+      <img
+        class="wd-float-left"
+        height="100px"
+        style="margin-right: 5px"
+        src="https://picsum.photos/200/300"
+        alt="random image"
+      />
+      exercitationem beatae voluptatibus ipsum optio est totam corrupti facere!
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit, modi
+      libero at illo cupiditate dolor quam eveniet cumque alias veniam facilis
+      quaerat tempore, minus beatae expedita explicabo accusamus. Libero,
+      inventore. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      <img
+        class="wd-float-right"
+        height="100px"
+        src="https://picsum.photos/200/300"
+        alt="random image"
+      />
+      <img
+        class="wd-float-right"
+        height="100px"
+        src="https://picsum.photos/200/300"
+        alt="random image"
+      />
+      <img
+        class="wd-float-right"
+        height="100px"
+        src="https://picsum.photos/200/300"
+        alt="random image"
+      />
+      Nostrum sit dolore fugiat, voluptates impedit maiores inventore possimus
+      ipsa fuga quam quis praesentium, placeat alias. Accusamus veritatis
+      ratione unde voluptas at! Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Dolorum minima sint sapiente doloremque architecto
+      assumenda reprehenderit, nulla fugit non sunt quasi cum, dolore
+      accusantium, quis nobis maxime fugiat. Culpa, pariatur.
+    </p>
+    <h2>Float</h2>
+    <div>
+      <div class="wd-float-left wd-dimension-portrait wd-bg-color-yellow">
+        Yellow
+      </div>
+      <div
+        class="wd-float-left wd-dimension-portrait wd-bg-color-blue wd-fg-color-white"
+      >
+        Blue
+      </div>
+      <div class="wd-float-left wd-dimension-portrait wd-bg-color-red">Red</div>
+      <img
+        class="wd-float-right"
+        src="https://www.staradvertiser.com/wp-content/uploads/2021/08/web1_Starship-gap2.jpg"
+      />
+      <div class="wd-float-done"></div>
+    </div>
+
+    <h2>Grid layout</h2>
+    <div class="wd-grid-row">
+      <div class="wd-grid-col-half-page wd-bg-color-yellow">
+        <h3>Left half</h3>
+      </div>
+      <div class="wd-grid-col-half-page wd-bg-color-blue wd-fg-color-white">
+        <h3>Right half</h3>
+      </div>
+    </div>
+    <div class="wd-grid-row">
+      <div class="wd-grid-col-third-page wd-bg-color-green wd-fg-color-white">
+        <h3>Left third</h3>
+      </div>
+      <div
+        class="wd-grid-col-two-thirds-page wd-bg-color-red wd-fg-color-white"
+      >
+        <h3>Right two thirds</h3>
+      </div>
+    </div>
+    <div class="wd-grid-row">
+      <div class="wd-grid-col-left-sidebar wd-bg-color-yellow">
+        <h3>Side bar</h3>
+        <p>This is the left sidebar</p>
+      </div>
+      <div class="wd-grid-col-main-content wd-bg-color-blue wd-fg-color-white">
+        <h3>Main content</h3>
+        <p>
+          This is the main content. This is the main content. This is the main
+          content.
+        </p>
+      </div>
+      <div
+        class="wd-grid-col-right-sidebar wd-bg-color-green wd-fg-color-white"
+      >
+        <h3>Side bar</h3>
+        <p>This is the right sidebar</p>
+      </div>
+    </div>
+    <h2>Flex</h2>
+    <div class="wd-flex-row-container">
+      <div class="wd-bg-color-yellow wd-width-75px">Column 1</div>
+      <div class="wd-bg-color-blue">Column 2</div>
+      <div class="wd-bg-color-red wd-flex-grow-1">Column 3</div>
+    </div>
   </body>
 </html>

@@ -1,6 +1,104 @@
 <html>
-  <head></head>
+  <head>
+    <link rel="stylesheet" href="/libs/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/Kanbas/styles.css" />
+    <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Navigation/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Modules/index.css" />
+  </head>
   <body>
+    <div class="d-flex">
+      <div class="d-none d-md-block">
+        <ul class="wd-kanbas-navigation">
+          <li>
+            <a href="/Kanbas/Account/Navigation/index.html"> Account</a>
+          </li>
+          <li class="wd-active">
+            <a href="/Kanbas/Dashboard/screen.html">Dashboard</a>
+          </li>
+          <li>
+            <a href="/Kanbas/Courses/Home/screen.html">Courses</a>
+          </li>
+          <li>
+            <a href="#">Calendar</a>
+          </li>
+          <li><a href="#">Inbox</a></li>
+        </ul>
+      </div>
+      <div class="d-none d-md-block">
+        <ul class="wd-navigation">
+          <li class="wd-active">
+            <a href="/Kanbas/Courses/Home/screen.html"> Home</a>
+          </li>
+          <li><a href="/Kanbas/Courses/Modules/screen.html"> Modules</a></li>
+          <li><a href="#"> Piazza</a></li>
+          <li><a href="/Kanbas/Courses/Grades/screen.html"> Grades</a></li>
+          <li>
+            <a href="/Kanbas/Courses/Assignments/screen.html"> Assignments</a>
+          </li>
+        </ul>
+      </div>
+      <div class="flex-fill">
+        <ul class="list-group wd-modules">
+          <li class="list-group-item">
+            <div>
+              <i class="fa fa-ellipsis-v"></i> Week 1
+              <span class="float-end">
+                <i class="fa fa-check-circle text-success"></i>
+                <i class="fa fa-plus ms-2"></i>
+                <i class="fa fa-ellipsis-v ms-2"></i>
+              </span>
+            </div>
+            <ul class="list-group">
+              <li class="list-group-item">
+                <i class="fa fa-ellipsis-v"></i> Learning Objectives
+                <span class="float-end">
+                  <i class="fa fa-check-circle text-success"></i>
+                  <i class="fa fa-ellipsis-v ms-2"></i>
+                </span>
+              </li>
+              <li class="list-group-item">
+                <i class="fa fa-ellipsis-v"></i> Syllabus
+                <span class="float-end">
+                  <i class="fa fa-check-circle text-success"></i>
+                  <i class="fa fa-ellipsis-v ms-2"></i>
+                </span>
+              </li>
+              <li class="list-group-item">
+                <i class="fa fa-ellipsis-v"></i> Calendar
+                <span class="float-end">
+                  <i class="fa fa-check-circle text-success"></i>
+                  <i class="fa fa-ellipsis-v ms-2"></i>
+                </span>
+              </li>
+              <li class="list-group-item">
+                <i class="fa fa-ellipsis-v"></i> Project
+                <span class="float-end">
+                  <i class="fa fa-check-circle text-success"></i>
+                  <i class="fa fa-ellipsis-v ms-2"></i>
+                </span>
+              </li>
+            </ul>
+          </li>
+          <li class="list-group-item">
+            <div>
+              <i class="fa fa-ellipsis-v"></i> Week 2
+              <span class="float-end">
+                <i class="fa fa-check-circle text-success"></i>
+                <i class="fa fa-plus ms-2"></i>
+                <i class="fa fa-ellipsis-v ms-2"></i>
+              </span>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="flex-grow-0 me-2 d-none d-lg-block" style="width: 250px">
+        <h3>Course Status</h3>
+        <!-- Implement Course Status here -->
+      </div>
+    </div>
+
     <table width="100%">
       <tbody>
         <tr>

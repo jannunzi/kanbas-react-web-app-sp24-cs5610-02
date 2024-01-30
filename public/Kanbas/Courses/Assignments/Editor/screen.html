@@ -1,5 +1,7 @@
 <html>
-  <head></head>
+  <head>
+    <link rel="stylesheet" href="/libs/bootstrap/bootstrap.min.css" />
+  </head>
   <body>
     <form action="/Kanbas/Courses/Assignments/screen.html">
       <table width="100%">
@@ -43,8 +45,12 @@
             </td>
             <td valign="top">
               <label for="wd-assignment-name">Assignment</label><br />
-              <input value="A1" id="wd-assignment-name" /><br />
-              <textarea>
+              <input
+                class="form-control"
+                value="A1"
+                id="wd-assignment-name"
+              /><br />
+              <textarea class="form-control">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus rerum reprehenderit voluptatum neque eum repellendus ullam eos adipisci? Ratione id dicta quo natus earum dignissimos similique quam qui numquam exercitationem.</textarea
               >
               <table>
@@ -52,13 +58,19 @@
                   <tr>
                     <td>Points</td>
                     <td>
-                      <input type="number" value="100" min="0" max="100" />
+                      <input
+                        class="form-control"
+                        type="number"
+                        value="100"
+                        min="0"
+                        max="100"
+                      />
                     </td>
                   </tr>
                   <tr>
                     <td>Assignment Group</td>
                     <td>
-                      <select>
+                      <select class="form-control">
                         <option>Group 1</option>
                         <option>Group 2</option>
                         <option>Group 3</option>
@@ -109,18 +121,21 @@
                     <td>
                       Due<br />
                       <input
+                        class="form-control"
                         name="wd-due-date"
                         type="date"
                         value="2021-01-01"
                       /><br />
                       Available From<br />
                       <input
+                        class="form-control"
                         name="wd-available-from"
                         type="date"
                         value="2021-01-01"
                       /><br />
                       Until<br />
                       <input
+                        class="form-control"
                         name="wd-available-until"
                         type="date"
                         value="2021-01-01"
@@ -161,8 +176,8 @@
           </tr>
         </tbody>
       </table>
-      <button type="submit">Save</button>
-      <button>Cancel</button>
+      <button class="btn btn-success" type="submit">Save</button>
+      <button class="btn btn-danger">Cancel</button>
     </form>
   </body>
 </html>

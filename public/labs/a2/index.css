@@ -173,3 +173,14 @@ p {
 .wd-width-75px {
   width: 75px;
 }
+
+.list-group {
+  border-radius: 0%;
+}
+
+.list-group-item.active {
+  z-index: 2;
+  color: var(--bs-list-group-active-color);
+  background-color: black;
+  border-color: black;
+}

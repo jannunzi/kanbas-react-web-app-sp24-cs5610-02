@@ -4,6 +4,7 @@ import IfElse from "./conditionals/IfElse";
 import TernaryOperator from "./conditionals/TernaryOperator";
 import ArrowFunctions from "./functions/ArrowFunctions";
 import ES5Functions from "./functions/ES5Functions";
+import FunctionDestructing from "./functions/FunctionDestructing";
 import ImpliedReturn from "./functions/ImpliedReturn";
 import Destructing from "./json/Destructing";
 import Spreading from "./json/Spreading";
@@ -15,6 +16,7 @@ function JavaScript() {
   return (
     <div>
       <h3>JavaScript</h3>
+      <FunctionDestructing />
       <Destructing />
       <Spreading />
       <MapFunction />

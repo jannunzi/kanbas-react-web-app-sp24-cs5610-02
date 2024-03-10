@@ -3,10 +3,22 @@ import { useParams, Routes, Route, Navigate } from "react-router-dom";
 import courses from "../Database/courses.json";
 import ModuleList from "./Modules/List";
 import CourseNavigation from "./Navigation";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 function Courses() {
-  const { cid } = useParams();
-  const course = courses.find((course) => course._id === cid);
+  const { courseId } = useParams();
+  // const course = courses.find((course) => course._id === courseId);
+  const COURSES_API = "http://localhost:4000/api/courses";
+  const [course, setCourse] = useState<any>({ _id: "" });
+  const findCourseById = async (courseId?: string) => {
+    const response = await axios.get(`${COURSES_API}/${courseId}`);
+    setCourse(response.data);
+  };
+  useEffect(() => {
+    findCourseById(courseId);
+  }, [courseId]);
+
   return (
     <>
       <h2>Courses {course?.name}</h2>

@@ -1,12 +1,21 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useParams, Routes, Route, Navigate } from "react-router-dom";
-import courses from "../Database/courses.json";
+// import courses from "../Database/courses.json";
 import ModuleList from "./Modules/List";
 import CourseNavigation from "./Navigation";
+import * as client from "./client";
 
 function Courses() {
   const { cid } = useParams();
-  const course = courses.find((course) => course._id === cid);
+  // const course = courses.find((course) => course._id === cid);
+  const [course, setCourse] = useState({ name: "Loading..." });
+  const fetchCourse = async (cid?: string) => {
+    const course = await client.fetchCourseById(cid);
+    setCourse(course);
+  };
+  useEffect(() => {
+    fetchCourse(cid);
+  }, [cid]);
   return (
     <>
       <h2>Courses {course?.name}</h2>

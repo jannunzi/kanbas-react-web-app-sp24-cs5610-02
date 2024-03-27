@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import * as client from "./client";
-export default function RegisterScreen() {
+export default function LoginScreen() {
   const navigate = useNavigate();
   const [user, setUser] = useState({ username: "", password: "" });
-  const register = async () => {
+  const login = async () => {
     try {
-      const newUser = await client.registerUser(user);
-      console.log(newUser);
+      const existingUser = await client.loginUser(user);
+      console.log(existingUser);
       navigate("/Kanbas/Account/profile");
     } catch (e) {
       console.log(e);
@@ -15,7 +15,7 @@ export default function RegisterScreen() {
   };
   return (
     <div>
-      <h1>Register</h1>
+      <h1>Login</h1>
       <input
         value={user.username}
         onChange={(e) => setUser({ ...user, username: e.target.value })}
@@ -29,11 +29,11 @@ export default function RegisterScreen() {
         placeholder="Password"
         type={"password"}
       />
-      <button onClick={register} className="btn btn-primary mt-2">
-        Register
-      </button>
-      <Link to="/Kanbas/Account/login" className="btn btn-link mt-2">
+      <button onClick={login} className="btn btn-primary mt-2">
         Login
+      </button>
+      <Link to="/Kanbas/Account/register" className="btn btn-link mt-2">
+        Register
       </Link>
     </div>
   );
